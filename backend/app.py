@@ -189,3 +189,12 @@ def all_books(limit: int = 500):
         })
 
     return {"count": len(data), "books": data}
+import os
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(
+        "app:app",
+        host="0.0.0.0",
+        port=int(os.environ.get("PORT", 8000))
+    )
