@@ -10,13 +10,13 @@ from typing import List, Dict, Optional
 # --------------------------
 # APP + CORS
 # --------------------------
-app = FastAPI(title="Book Recommender API")
+app = FastAPI(title="Book Genie API")
 
 # Allow local React dev server to call this API
-origins = [
+'''origins = [
     "http://localhost:3000",
     "http://127.0.0.1:3000",
-]
+]'''
 
 app.add_middleware(
     CORSMiddleware,
